@@ -5,6 +5,7 @@
 if [ $? -ne 0 ]; then
     exit 1
 fi
+
 curl -f http://localhost/health_check
 # If Nginx doesn't respond 200, then exit with 1 (error)
 if [ $? -ne 0 ]; then
