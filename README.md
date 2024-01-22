@@ -1,6 +1,6 @@
 # Docker Nginx & PHP-FPM with Supervisor
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/braddevans/docker-nginx-php-fpm/docker-build.yml?branch=main) ![GitHub](https://img.shields.io/github/license/olkitu/docker-nginx-php-fpm)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/breadhub-org/docker-nginx-php-fpm/docker-build.yml?branch=main) ![GitHub](https://img.shields.io/github/license/breadhub-org/docker-nginx-php-fpm)
 
 Based Official PHP image: https://hub.docker.com/_/php with additional packages:
 
@@ -57,8 +57,8 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 
 ## License
 
-[MIT](https://github.com/olkitu/docker-nginx-php-fpm/blob/main/LICENSE)
+[MIT](https://github.com/breadhub-org/docker-nginx-php-fpm/blob/main/LICENSE)
 
-## Source
+## Source origin
 
 Source: https://github.com/olkitu/docker-nginx-php-fpm
