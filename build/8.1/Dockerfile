@@ -1,10 +1,10 @@
-FROM php:8.0-fpm-bullseye
+FROM php:8.1-fpm-alpine3.19
 
 ENV PHP_FPM_HEALTHCHECK_COMMIT 078ab63599a031c3995bedf7623cb7d5495f3f56
 
 # Install Nginx
 RUN BUILD_PACKAGES='git' \
-    && apt-get update && apt-get install -y nginx supervisor libfcgi-bin $BUILD_PACKAGES \
+    && apk add --no-cache nginx supervisor curl fcgi $BUILD_PACKAGES \
     && mkdir -p /run/nginx/ \
     && rm -rf /var/log/nginx/access.log /var/log/nginx/error.log \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
@@ -16,12 +16,11 @@ RUN BUILD_PACKAGES='git' \
     && cp php-fpm-healthcheck /usr/local/bin/php-fpm-healthcheck \
     && chmod 700 /usr/local/bin/php-fpm-healthcheck \
     && echo "pm.status_path = /status" >> /usr/local/etc/php-fpm.d/zz-docker.conf \
-    && apt-get purge -y $BUILD_PACKAGES \
-    && rm -rf /var/lib/apt/lists/*
+    && apk del $BUILD_PACKAGES
 
 # Copy configurations
 COPY configs/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
-COPY configs/debian-nginx-default.conf /etc/nginx/sites-enabled/default
+COPY configs/alpine-nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY build/healthcheck.sh /usr/local/bin/healthcheck
 
 EXPOSE 80 9000
