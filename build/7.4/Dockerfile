@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-alpine3.14
+FROM php:7.4-fpm-alpine3.16
 
 ENV PHP_FPM_HEALTHCHECK_COMMIT 078ab63599a031c3995bedf7623cb7d5495f3f56
 
