@@ -50,7 +50,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        file: 7.3/Dockerfile
+        file: build/7.3/Dockerfile
         platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         labels: ${{ steps.meta.outputs.labels }}
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:7.3
@@ -59,7 +59,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        file: 7.3-debian/Dockerfile
+        file: build/7.3-debian/Dockerfile
         platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         labels: ${{ steps.meta.outputs.labels }}
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:7.3-buster
@@ -68,7 +68,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        file: 7.4/Dockerfile
+        file: build/7.4/Dockerfile
         platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         labels: ${{ steps.meta.outputs.labels }}
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:7.4,${{ env.REGISTRY }}/${{ github.repository }}:7
@@ -77,7 +77,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        file: 7.4-debian/Dockerfile
+        file: build/7.4-debian/Dockerfile
         platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         labels: ${{ steps.meta.outputs.labels }}
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:7.4-buster,${{ env.REGISTRY }}/${{ github.repository }}:7-buster
@@ -86,7 +86,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        file: 8.0/Dockerfile
+        file: build/8.0/Dockerfile
         platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         labels: ${{ steps.meta.outputs.labels }}
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:8,${{ env.REGISTRY }}/${{ github.repository }}:8.0,${{ env.REGISTRY }}/${{ github.repository }}:latest
@@ -95,7 +95,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        file: 8.0-debian/Dockerfile
+        file: build/8.0-debian/Dockerfile
         platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         labels: ${{ steps.meta.outputs.labels }}
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:8-buster,${{ env.REGISTRY }}/${{ github.repository }}:8.0-buster,${{ env.REGISTRY }}/${{ github.repository }}:latest-buster

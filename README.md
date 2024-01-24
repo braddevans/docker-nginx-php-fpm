@@ -31,13 +31,13 @@ Check from Tags all supported versions and architechtures.
 Run latest version
 
 ```
-docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/olkitu/docker-nginx-php-fpm
+docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/breadhub-org/docker-nginx-php-fpm
 ```
 
 Run specific version, example 7.4
 
 ```
-docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/docker-nginx-php-fpm:7.4
+docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/breadhub-org/docker-nginx-php-fpm:7.4
 ```
 
 ## Usage (docker compose)
@@ -46,6 +46,7 @@ Run latest version
 
 ```sh
 curl https://github.com/breadhub-org/docker-nginx-php-fpm/raw/main/docker-compose.yml -o docker-compose.yml
+curl https://github.com/breadhub-org/docker-nginx-php-fpm/raw/main/configs/debian-nginx-default.conf -o config/nginx_default.conf
 docker compose up -d
 ```
 
@@ -54,8 +55,8 @@ docker compose up -d
 To build image to production create `Dockerfile` to specify your own configuration. 
 
 ```Dockerfile
-# Use olkitu/docker-nginx-php-fpm image
-FROM ghcr.io/olkitu/docker-nginx-php-fpm:7.4
+# Use breadhub-org/docker-nginx-php-fpm image
+FROM ghcr.io/breadhub-org/docker-nginx-php-fpm:7.4
 
 # Use production php.ini configuration and hide PHP-version
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
@@ -69,5 +70,4 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 [MIT](https://github.com/breadhub-org/docker-nginx-php-fpm/blob/main/LICENSE)
 
 ## Source origin
-
 Source: https://github.com/olkitu/docker-nginx-php-fpm
