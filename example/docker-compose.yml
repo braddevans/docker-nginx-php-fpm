@@ -1,0 +1,12 @@
+name: web-cdn
+services:
+    docker-nginx-php-fpm:
+        container_name: web-cdn
+        user: root
+        ports:
+            - 10001:8080
+        volumes:
+            - ./_conf/h5ai-site.conf:/etc/nginx/sites-enabled/default.conf
+            - ./_conf/nginx.conf:/etc/nginx/nginx.conf
+            - .:/var/www/html
+        image: ghcr.io/breadhub-org/docker-nginx-php-fpm:7.3
