@@ -7,4 +7,4 @@ services:
     volumes:
       - ./config/nginx_default.conf:/etc/nginx/conf.d/default.conf
       - ./website:/var/www/html:ro
-    image: ghcr.io/breadhub-org/docker-nginx-php-fpm:7.3
+    image: ghcr.io/breadhub-org/docker-nginx-php-fpm:8.0
