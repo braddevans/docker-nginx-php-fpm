@@ -2,6 +2,8 @@
 
 ##### drop support for images with a lot of critical vulnerabilities >= 10
 
+##### 7.*-debian images the only images planned to be removed the alpine versions will stay
+
 ##### example 7.3-fpm-buster
 
 https://hub.docker.com/layers/library/php/7.3-fpm-buster/images/sha256-2d607bacc97a4b5919304417157a93b6004a2014570397280817872d162ad1e0?context=explore
