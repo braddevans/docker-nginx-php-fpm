@@ -14,31 +14,21 @@ This repository will automatically update weekly.
 
 Alpine:
 
-* 8: `8.0`, `8`, `latest`
+* 8.3: `8.3`, `8`, `latest`
+* 8.2: `8.2`,
+* 8.1: `8.1`,
+* 8: `8.0`,
 * 7.4: `7.4`, `7`
-* 7.3: `7.3`
+* 7.3: `7.3`  # note: lots of vulnerabilities
 
 Debian Buster:
 
-* 8: `8.0-buster`, `8-buster`, `latest-buster`
-* 7.4: `7.4-buster`, `7-buster`
-* 7.3: `7.3-buster`
+* 8.3: `8.3-debian`, `8-debian`, `latest-debian`
+* 8.2: `8.2-debian`,
+* 8.1: `8.1-debian`,
+* 8: `8.0-debian`
 
-Check from Tags all supported versions and architechtures.
-
-## Usage (docker run)
-
-Run latest version
-
-```
-docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/breadhub-org/docker-nginx-php-fpm
-```
-
-Run specific version, example 7.4
-
-```
-docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/breadhub-org/docker-nginx-php-fpm:7.4
-```
+Check from Tags all supported versions and architectures.
 
 ## Usage (docker compose)
 
