@@ -26,7 +26,7 @@ Debian Buster:
 
 Check from Tags all supported versions and architechtures.
 
-## Usage
+## Usage (docker run)
 
 Run latest version
 
@@ -38,6 +38,15 @@ Run specific version, example 7.4
 
 ```
 docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/docker-nginx-php-fpm:7.4
+```
+
+## Usage (docker compose)
+
+Run latest version
+
+```sh
+curl https://github.com/breadhub-org/docker-nginx-php-fpm/raw/main/docker-compose.yml -o docker-compose.yml
+docker compose up -d
 ```
 
 ## Production image
