@@ -1,4 +1,4 @@
-FROM php:8.0-fpm-bullseye
+FROM php:8.2.14-fpm-bullseye
 
 ENV PHP_FPM_HEALTHCHECK_COMMIT 078ab63599a031c3995bedf7623cb7d5495f3f56
 
